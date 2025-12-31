@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@layer base{
+    body{
+        @apply bg-[hsl(0,0%,10%)] px-[10px];
+    }
+}
+
+@layer components {
+    .to-do-list{
+        @apply mt-[50px] text-center font-sans;
+    }
+
+    h1{
+        @apply text-[4rem] text-white;
+    }
+
+    button {
+        @apply text-[1.7rem] font-bold 
+                py-[10px] px-[20px]
+                text-white 
+                border-0 rounded-[5px] 
+                cursor-pointer
+                transition-colors duration-300;
+
+    }
+
+    .add-button{
+        @apply bg-[hsl(125,47%,54%)]
+                hover:bg-[hsl(125,47%,44%)]
+                ml-[10px]
+    }
+
+    .task-container{
+        @apply max-w-3xl
+                m-auto;
+    }
+
+    .delete-button{
+        @apply bg-[hsl(10,90%,50%)]
+                hover:bg-[hsl(10,90%,40%)]
+    }
+
+    .move-button{
+        @apply bg-[hsl(207,90%,64%)]
+                hover:bg-[hsl(207,90%,54%)]
+    }
+
+    input[type="text"]
+    {
+        @apply text-[1.6rem]
+                p-[10px] mb-[10px]
+                border-[2px] border-[hsla(0,0%,80%,0.5)] rounded-[5px]
+                text-[hsla(0,0%,0%,0.5)]
+                bg-white;
+
+    }
+
+    ol{
+        @apply p-0
+    }
+
+    li{
+        @apply text-[2rem] font-bold
+                p-[15px] mb-[10px]
+                bg-[hsl(0,0%,97%)]
+                border-[3px] border-[hsla(0,0%,85%,0.75)] rounded-[5px]
+                flex items-center
+    }
+    .text{
+        @apply flex-1;
+    }
+
+    .delete-button, .move-button{
+        @apply py-[8px] px-[12px]
+                text-[1.4rem]
+                ml-[10px]
+    }
+
+    .done {
+        @apply line-through text-gray-400;
+    }
+
+    input[type="checkbox"]
+    {
+        @apply 
+                ml-[10px]
+                cursor-pointer
+                accent-green-500
+                w-[3rem] h-[3rem]
+                self-center;
+    }
+
+}
